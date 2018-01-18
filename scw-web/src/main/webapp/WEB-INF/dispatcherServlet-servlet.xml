@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <context:component-scan base-package="com.xu.scw" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- 视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+        <property name="order" value="1"/>
+        <property name="prefix" value="/WEB-INF/views/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <!-- 标准的两个 -->
+    <mvc:annotation-driven />
+       <!-- &lt;!&ndash;配置mvc区分后缀&ndash;&gt;
+        <mvc:path-matching suffix-pattern="true"/>
+    </mvc:annotation-driven>-->
+
+    <mvc:default-servlet-handler/>
+
+   <!-- <aop:aspectj-autoproxy expose-proxy="true"></aop:aspectj-autoproxy>-->
+   <!-- <import resource="classpath:spring-view-controller.xml"/>-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/static/**"/>
+            <mvc:exclude-mapping path="/login.html"/>
+            <mvc:exclude-mapping path="/reg.html"/>
+            <mvc:exclude-mapping path="/UserLogin"/>
+            <mvc:exclude-mapping path="/Register"/>
+            <mvc:exclude-mapping path="/api-docs"/>
+            <bean class="com.xu.scw.controller.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--文件解析器-->
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="maxUploadSize" value="10485760000"></property>
+        <property name="maxInMemorySize" value="409600"></property>
+    </bean>
+
+    <mvc:cors>
+        <!-- 所有方式过来的请求都能跨域 -->
+        <mvc:mapping path="/**" allowed-methods="*"/>
+    </mvc:cors>
+
+
+
+
+</beans>

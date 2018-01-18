@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 整合mybatis -->
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 全局配置文件的位置 -->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+        <!-- SQL映射文件的位置 -->
+        <property name="mapperLocations" value="classpath:mybatis/mapper/*Mapper.xml"></property>
+        <!-- #{dataSource}：#{组件id}；取出组件对象 使用springEl表达式-->
+        <property name="dataSource" value="#{dataSource}"></property>
+    </bean>
+
+    <!-- 扫描所有的dao接口即可  -->
+    <!-- <mybatis-spring:scan base-package="com.atguigu.scw.dao"/> -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.xu.scw.dao"></property>
+    </bean>
+</beans>

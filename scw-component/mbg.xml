@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!--mybatis逆向工程配置-->
+    <!--
+    targetRuntime="MyBatis3"：复杂版的CRUD；（可以带复杂条件的）
+    targetRuntime="MyBatis3Simple"：简单版的CRUD；（只能按主键进行CRUD）
+     -->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 配置数据库连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/scw"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- javaModelGenerator:指定javaBean生成的地方 -->
+        <javaModelGenerator
+                targetPackage="com.xu.scw.bean.project"
+                targetProject="E:\code\scwcode\scw-component\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--sqlMapGenerator：指定生成xml的地方  -->
+        <sqlMapGenerator targetPackage="mybatis.mapper.project"
+                         targetProject="E:\code\scwcode\scw-component\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- javaClientGenerator:指定dao接口生成的地方 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.xu.scw.dao.project"
+                             targetProject="E:\code\scwcode\scw-component\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 指定需要逆向的表格:
+            默认是按照驼峰命名法进行大小写转换； Txxxx；快速的区分javaBean的类型（DO、VO）
+            DO：Database Object（数据库映射的对象）
+            VO：【View Object】【Value Object】（封装给页面需要显示的数据）
+         -->
+        <table tableName="t_project_resource"/>
+       <!-- <table tableName="scw_name"></table>-->
+       <!-- <table tableName="t_test"></table>
+        <table tableName="t_token"></table>-->
+
+        <!--<table tableName="t_account_type_cert"></table>
+        <table tableName="t_advertisement"></table>
+        <table tableName="t_cert"></table>
+        <table tableName="t_dictionary"></table>
+        <table tableName="t_member"></table>
+        <table tableName="t_member_address"></table>
+        <table tableName="t_member_cert"></table>
+        <table tableName="t_member_project_follow"></table>
+        <table tableName="t_message"></table>
+        <table tableName="t_order"></table>
+        <table tableName="t_param"></table>
+        <table tableName="t_permission"></table>
+        <table tableName="t_project"></table>
+        <table tableName="t_project_tag"></table>
+        <table tableName="t_project_type"></table>
+        <table tableName="t_return"></table>
+        <table tableName="t_role"></table>
+        <table tableName="t_role_permission"></table>
+        <table tableName="t_tag"></table>
+        <table tableName="t_type"></table>
+        <table tableName="t_user"></table>
+        <table tableName="t_user_role"></table>-->
+    </context>
+</generatorConfiguration>

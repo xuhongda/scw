@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!--
+		appender:"笔 "
+			name="STDOUT":随便起个名字【STDOUT】
+			class=""：指定用哪个"笔"来写日志;org.apache.log4j.ConsoleAppender【把日志内容写到控制台】
+		每一个appender都应该有一个layout【布局】
+	 -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<!--定义一些属性： 编码格式使用utf-8 -->
+		<param name="Encoding" value="UTF-8" />
+		<!-- 
+			layout：定义写日志的日志的时候日志的布局格式 ：
+				org.apache.log4j.PatternLayout[自定义格式]
+		-->
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- ConversionPattern:要转换成的格式：
+				-5:靠左对齐；正数是靠右对齐
+				%5p: DEBUG、INFO、WARN、ERROR、FATAL
+				 INFO 
+				 WARN 
+				DEBUG
+					
+				%p：输出日志的级别
+				%d：{规定时间格式}：输出时间，使用后缀的{}自定义时间格式
+				%m：消息【自己写的那一串】
+				%M：
+				%F（File：打印所在文件）
+				%L（line）打印所在行
+				%-5p %d{MM-dd HH:mm:ss,SSS} %m  (%F:%L) \n
+			 -->
+			<param name="ConversionPattern" value="[%-5p] %d{MM-dd HH:mm:ss,SSS} ---%m---  (%F:%L) \n" />
+		</layout>
+	</appender>
+	
+	<!-- logger：哪些java包下的东西运行的时候进行输出
+	name="org.springframework"：指定包名；这个包里面的日志会被输出
+	 -->
+	<logger name="org.springframework">
+		<level value="info" />
+	</logger>
+	
+	<!-- 日志根输出；root所有日志输出都要遵循的一个 -->
+	<root>
+		<!-- 输出这个级别以及其以上的日志 -->
+		<level value="debug" />
+		<!-- 使用这个输出器来输出level级别以上的日志 -->
+		<appender-ref ref="STDOUT" />
+	</root>
+</log4j:configuration>

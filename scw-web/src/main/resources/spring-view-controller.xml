@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+        <!--登陆页面-->
+        <mvc:view-controller path="/login.html" view-name="login"/>
+        <!--注册页面-->
+        <mvc:view-controller path="/reg.html" view-name="reg"/>
+
+        <!--增加页面-->
+        <mvc:view-controller path="/user/add.html" view-name="permission/user/add"/>
+        <!--角色维护-->
+        <mvc:view-controller path="/role/list.html" view-name="permission/role/role"/>
+        <!--资质-->
+        <mvc:view-controller path="/cert/list.html" view-name="certManager/cert"/>
+        <!--分类管理-->
+        <!--<mvc:view-controller path="/cert/type.html" view-name="certManager/type"/>-->
+        <!--许可维护-->
+        <mvc:view-controller path="/permission.html" view-name="permission/permission"/>
+        <!---->
+        <mvc:view-controller path="/user/allocateRole.html" view-name="permission/user/assignRole"/>
+        <!--流程管理-->
+        <mvc:view-controller path="/process/process.html" view-name="process/process"/>
+        <!--个人设置-->
+        <mvc:view-controller path="manager-navbar.html" view-name="mine/member"/>
+        <!--会员中心-->
+        <mvc:view-controller path="member.html" view-name="manager/main"/>
+        <!--我的众筹-->
+        <mvc:view-controller path="minecrowdfunding.html" view-name="mine/minecrowdfunding"/>
+        <!--发起众筹-->
+        <mvc:view-controller path="start.html" view-name="process/start"/>
+        <!---->
+        <mvc:view-controller path="start-step-1.html" view-name="process/start-step-1"/>
+        <mvc:view-controller path="start-step-2.html" view-name="process/start-step-2"/>
+        <mvc:view-controller path="start-step-3.html" view-name="process/start-step-3"/>
+</beans>

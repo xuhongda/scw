@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>creat</title>
+</head>
+
+<body>
+    <script src="../static/jquery/jquery-3.2.1.js"></script>
+    <a href="http://ooxx.ooxx" id="foo">sample text</a>
+    <script type="text/javascript">
+        var foo = document.getElementById('foo');
+        console.log(foo); //打出来就知道了，foo没有问题
+        alert(foo); //在这里，关键在于alert这个方法会执行一次toString，javascript中，对HTMLAnchorElement执行toString，得到的就是HTMLAnchorElement.href
+        console.log(foo.toString()); // 返回 http://ooxx.ooxx 和alert(foo)一样
+    </script>
+
+    <a href="http://www.baidu.com?str=123">baidu</a>
+</body>
+</html>
