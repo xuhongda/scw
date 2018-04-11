@@ -12,10 +12,10 @@ public enum CertTypeEnmu {
     PERSONCOMPANY(2,"个体工商户"),
     ONEBUSINESS(3,"个人经营"),
     NON_ORGANIZATIONS(4,"政府及非盈利组织");
-    private CertTypeEnmu(Integer id, String name){
+     CertTypeEnmu(Integer id, String name){
         this.id=id;
         this.name=name;
-    };
+     }
     Integer id;
     String name;
     public Integer getId() {

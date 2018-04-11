@@ -13,10 +13,7 @@ import org.activiti.engine.TaskService;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.repository.ProcessDefinitionQuery;
-import org.activiti.engine.runtime.ExecutionQuery;
-import org.activiti.engine.runtime.ProcessInstanceQuery;
 import org.apache.commons.io.IOUtils;
-import org.apache.http.HttpResponse;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
@@ -120,8 +117,6 @@ public class ProcessDeploy {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
             ProcessDefinitionEntityVO processDefinitionEntityVO = new ProcessDefinitionEntityVO();
             BeanUtils.copyProperties(processDefinition,processDefinitionEntityVO);
             processDefinitionEntityVOS.add(processDefinitionEntityVO);

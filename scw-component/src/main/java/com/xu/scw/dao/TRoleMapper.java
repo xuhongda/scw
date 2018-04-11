@@ -40,5 +40,10 @@ public interface TRoleMapper {
 
     List<TRole> queryAllRoled(Integer userId);
 
+    /**
+     * 传入sql
+     */
+    List<TRole> queryBySql(TRole role);
+
 
 }

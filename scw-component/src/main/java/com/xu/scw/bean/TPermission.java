@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author xuhongda
+ */
 public class TPermission {
     /**
      * 保存所有子菜单

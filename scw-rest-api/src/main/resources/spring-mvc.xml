@@ -25,7 +25,7 @@
         <!-- 所有方式过来的请求都能跨域 -->
         <mvc:mapping path="/**" allowed-methods="*"/>
     </mvc:cors>
-<!--文件上传解析器-->
+<!--文件上传解析器,必须有id-->
     <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
         <property name="defaultEncoding" value="utf-8"></property>
         <property name="maxUploadSize" value="10485760000"></property>

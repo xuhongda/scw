@@ -2,15 +2,9 @@ package com.xu.scw.util;
 
 import java.io.File;
 import java.util.Map;
-
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.mail.MailException;
-import org.springframework.mail.MailSender;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import sun.nio.cs.ext.GBK;
-
 import javax.mail.internet.MimeMessage;
 
 /**

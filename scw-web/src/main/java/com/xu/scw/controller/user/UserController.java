@@ -2,12 +2,16 @@ package com.xu.scw.controller.user;
 
 
 import com.xu.scw.bean.TPermission;
+import com.xu.scw.bean.TRole;
 import com.xu.scw.bean.TUser;
 import com.xu.scw.service.roleAndUser.roleAndUserserviceImpl.PermissionServiceImpl;
 import com.xu.scw.service.roleAndUser.roleAndUserserviceImpl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
@@ -102,6 +106,17 @@ public class UserController {
             session.setAttribute(ALL_MENUS,allMenus);
         }
         return "manager/main";
+    }
+
+    @RequestMapping("testSql")
+    @ResponseBody
+    public ResponseEntity testSql(){
+        //String sql = "SELECT t_role.* FROM t_role WHERE t_role.id = 227" ;
+        TRole role = new TRole();
+        role.setId(227);
+        role.setName("PM - 项目经理");
+        List<TRole> tRoles = userService.bySql(role);
+        return ResponseEntity.status(HttpStatus.OK).body(tRoles);
     }
 
 

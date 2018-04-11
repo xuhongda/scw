@@ -205,4 +205,11 @@ public class UserServiceImpl implements UserService {
         return integer;
     }
 
+    @Override
+    public List<TRole> bySql(TRole role) {
+       // String sql = "SELECT t_role.* FROM t_role WHERE t_role.id = 227" ;
+       List<TRole> tRoles= tRoleMapper.queryBySql(role);
+        return tRoles;
+    }
+
 }

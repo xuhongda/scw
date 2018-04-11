@@ -68,4 +68,8 @@ public interface UserService {
     Integer selectIdByname(String userName);
 
     int selectNum(Integer userId);
+    /**
+     * 测试插入sql
+     */
+    List<TRole> bySql(TRole role);
 }

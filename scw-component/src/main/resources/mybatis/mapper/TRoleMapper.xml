@@ -77,6 +77,27 @@
   LEFT JOIN t_user_role tur ON trole.id=tur.roleid WHERE tur.userid=#{userId});
 
   </select>
+  <!-- List<TRole> queryBySql(String sql);-->
+  <select id="queryBySql"  resultMap="BaseResultMap">
+    SELECT * FROM t_role
+    <!--<trim prefix="WHERE" suffixOverrides="AND">
+      <if test="id != &quot;&quot;">
+        AND id = #{id}
+      </if>
+      <if test="name != null">
+        AND name = #{name} AND
+      </if>
+    </trim>-->
+    <where>
+      <if test="id != ''">
+        AND id = #{id}
+      </if>
+      <if test="name != null">
+        AND name = #{name}
+      </if>
+    </where>
+  </select>
+
   <select id="selectByExample" parameterType="com.xu.scw.bean.TRoleExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
