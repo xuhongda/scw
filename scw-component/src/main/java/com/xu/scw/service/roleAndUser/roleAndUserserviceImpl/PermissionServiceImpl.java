@@ -30,7 +30,7 @@ public class PermissionServiceImpl implements PermissionService{
         //List<TPermission> menus = tPermissionMapper.selectByExample(null);
         //获取当前用户的权限
         List<TPermission> list = tPermissionMapper.selectUserPermission(loginacct);
-        System.out.println(list.size());
+        System.out.println("😂😂😂😂😂😂"+list.size());
         //构建好菜单
         List<TPermission> buildMenus = buildMenus(list);
         return buildMenus;
