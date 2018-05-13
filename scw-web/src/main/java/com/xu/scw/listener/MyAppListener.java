@@ -35,7 +35,7 @@ public class MyAppListener implements ServletContextListener {
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext());
         ServletContext servletContext = webApplicationContext.getServletContext();
         String contextPath = servletContext.getContextPath();
-        //
+        //获取spring容器中的bean
         ProjectNameServiceImpl projectNameService = WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext()).getBean(ProjectNameServiceImpl.class);
         ScwName scwName = new ScwName();
         scwName.setProjectName("mal");

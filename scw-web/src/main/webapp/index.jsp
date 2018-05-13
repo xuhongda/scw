@@ -11,7 +11,7 @@
 	<%@ include file="/WEB-INF/include/commons-css.jsp" %>
 
 
-	<link rel="stylesheet" href="${front}/static/css/carousel.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/carousel.css">
 	<style>
 		h3 {
 			font-weight: bold;
@@ -155,7 +155,7 @@
 		}
 
 		.newsList li {
-			background: url("${front}/static/images/share/point.png") no-repeat 2px 14px;
+			background: url("${pageContext.request.contextPath}/static/images/share/point.png") no-repeat 2px 14px;
 			padding-left: 10px;
 			height: 30px;
 			line-height: 30px;
@@ -197,7 +197,7 @@
 			font-size: 16px;
 			display: block;
 			white-space: nowrap;
-			word-wrap: normal;
+			word-wrap: norpageContext.request.contextPath;
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
@@ -240,13 +240,13 @@
 	  </ol>
 	  <div class="carousel-inner" role="listbox">
 		  <div class="item active" onclick="window.location.href='project.html'" style="cursor:pointer;">
-			  <img src="${front}/static/img/carousel-1.jpg" alt="First slide">
+			  <img src="${pageContext.request.contextPath}/static/img/carousel-1.jpg" alt="First slide">
 		  </div>
 		  <div class="item" onclick="window.location.href='project.html'" style="cursor:pointer;">
-			  <img src="${front}/static/img/carousel-2.jpg" alt="Second slide">
+			  <img src="${pageContext.request.contextPath}/static/img/carousel-2.jpg" alt="Second slide">
 		  </div>
 		  <div class="item" onclick="window.location.href='project.html'" style="cursor:pointer;">
-			  <img src="${front}/static/img/carousel-3.jpg" alt="Third slide">
+			  <img src="${pageContext.request.contextPath}/static/img/carousel-3.jpg" alt="Third slide">
 		  </div>
 	  </div>
 	  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -269,21 +269,21 @@
 	  <!-- Three columns of text below the carousel -->
 	  <div class="row">
 		  <div class="col-lg-4">
-			  <img class="img-circle" src="${front}/static/img/p1.jpg" alt="Generic placeholder image"
+			  <img class="img-circle" src="${pageContext.request.contextPath}/static/img/p1.jpg" alt="Generic placeholder image"
 				   style="width: 140px; height: 140px;">
 			  <h2>智能高清监控机器人</h2>
 			  <p>可爱的造型，摄像安防远程互联的全能设计，让你随时随地守护您的家人，陪伴你的生活。</p>
 			  <p><a class="btn btn-default" href="project.html" role="button">项目详情 &raquo;</a></p>
 		  </div><!-- /.col-lg-4 -->
 		  <div class="col-lg-4">
-			  <img class="img-circle" src="${front}/static/img/p2.jpg" alt="Generic placeholder image"
+			  <img class="img-circle" src="${pageContext.request.contextPath}/static/img/p2.jpg" alt="Generic placeholder image"
 				   style="width: 140px; height: 140px;">
 			  <h2>NEOKA智能手环</h2>
 			  <p>要运动更要安全，这款、名为“蝶舞”的NEOKA-V9100智能运动手环为“安全运动而生”。</p>
 			  <p><a class="btn btn-default" href="project.html" role="button">项目详情 &raquo;</a></p>
 		  </div><!-- /.col-lg-4 -->
 		  <div class="col-lg-4">
-			  <img class="img-circle" src="${front}/static/img/p3.png" alt="Generic placeholder image"
+			  <img class="img-circle" src="${pageContext.request.contextPath}/static/img/p3.png" alt="Generic placeholder image"
 				   style="width: 140px; height: 140px;">
 			  <h2>驱蚊扣</h2>
 			  <p>随处使用的驱蚊纽扣，<br>解决夏季蚊虫问题。</p>
@@ -301,14 +301,14 @@
 						  </div>
 						  <h3>
 							  科技
-							  <small style="color:#FFF;">开启智慧未来</small>
+							  <spageContext.request.contextPathl style="color:#FFF;">开启智慧未来</spageContext.request.contextPathl>
 						  </h3>
 					  </div>
 					  <div class="mBd" style="padding-top:10px;">
 						  <div class="row">
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-1.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-1.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">活性富氢净水直饮机</a>
@@ -338,7 +338,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-2.gif"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-2.gif"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">酷驰触控龙头，智享厨房黑科技</a>
@@ -368,7 +368,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-3.png"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-3.png"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">小熊猫鱼眼全景安防摄像机</a>
@@ -398,7 +398,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-4.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-4.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">一款精致的机械表</a>
@@ -444,14 +444,14 @@
 						  </div>
 						  <h3>
 							  设计
-							  <small style="color:#FFF;">创意改变生活</small>
+							  <spageContext.request.contextPathl style="color:#FFF;">创意改变生活</spageContext.request.contextPathl>
 						  </h3>
 					  </div>
 					  <div class="mBd" style="padding-top:10px;">
 						  <div class="row">
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-5.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-5.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">活性富氢净水直饮机</a>
@@ -481,7 +481,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-6.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-6.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">酷驰触控龙头，智享厨房黑科技</a>
@@ -511,7 +511,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-7.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-7.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">小熊猫鱼眼全景安防摄像机</a>
@@ -541,7 +541,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-8.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-8.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">一款精致的机械表</a>
@@ -587,14 +587,14 @@
 						  </div>
 						  <h3>
 							  农业
-							  <small style="color:#FFF;">网络天下肥美</small>
+							  <spageContext.request.contextPathl style="color:#FFF;">网络天下肥美</spageContext.request.contextPathl>
 						  </h3>
 					  </div>
 					  <div class="mBd" style="padding-top:10px;">
 						  <div class="row">
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-9.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-9.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">活性富氢净水直饮机</a>
@@ -624,7 +624,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-2.gif"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-2.gif"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">酷驰触控龙头，智享厨房黑科技</a>
@@ -654,7 +654,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-3.png"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-3.png"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">小熊猫鱼眼全景安防摄像机</a>
@@ -684,7 +684,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-4.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-4.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">一款精致的机械表</a>
@@ -730,14 +730,14 @@
 						  </div>
 						  <h3>
 							  其他
-							  <small style="color:#FFF;">发现更多惊喜</small>
+							  <spageContext.request.contextPathl style="color:#FFF;">发现更多惊喜</spageContext.request.contextPathl>
 						  </h3>
 					  </div>
 					  <div class="mBd" style="padding-top:10px;">
 						  <div class="row">
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-1.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-1.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">活性富氢净水直饮机</a>
@@ -767,7 +767,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-2.gif"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-2.gif"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">酷驰触控龙头，智享厨房黑科技</a>
@@ -797,7 +797,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-3.png"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-3.png"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">小熊猫鱼眼全景安防摄像机</a>
@@ -827,7 +827,7 @@
 							  </div>
 							  <div class="col-md-3">
 								  <div class="thumbnail">
-									  <img alt="300x200" src="${front}/static/img/product-4.jpg"/>
+									  <img alt="300x200" src="${pageContext.request.contextPath}/static/img/product-4.jpg"/>
 									  <div class="caption">
 										  <h3 class="break">
 											  <a href="project.html">一款精致的机械表</a>

@@ -1,5 +1,8 @@
 package com.xu.scw.bean.project;
 
+/**
+ * @author xuhongda
+ */
 public class ScwName {
     private Integer id;
 

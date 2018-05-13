@@ -11,7 +11,7 @@
       <%--静态包含，引入bootStrap--%>
       <%@ include file="/WEB-INF/include/commons-css.jsp"%>
 
-	<link rel="stylesheet" href="${mal}/static/css/login.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/login.css">
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -26,7 +26,7 @@
         <br/>
         <a href="http://localhost:8080/scw/front/talk.jsp"> <button type="button" class="btn btn-info">访问手机版</button></a>
 
-        <form class="form-signin" role="form" action="${mal}/UserLogin" method="post">
+        <form class="form-signin" role="form" action="${pageContext.request.contextPath}/UserLogin" method="post">
         <h2 class="form-signin-heading"><i class="glyphicon glyphicon-log-in"></i> 用户登录</h2>
           <span style="color: #99CC66">${msg}</span>
 		  <div class="form-group has-success has-feedback">
@@ -56,7 +56,7 @@
                 </label>
             </a>
           <label style="float:right">
-            <a href="${mal}/reg.html">我要注册</a>
+            <a href="${pageContext.request.contextPath}/reg.html">我要注册</a>
           </label>
         </div>
         <a class="btn btn-lg btn-success btn-block" onclick="dologin()" >登录</a>
@@ -73,7 +73,7 @@
             //window.location.href = "main.jsp";
             $(".form-signin").submit();
         } else {
-            window.location.href = "${mal}/login.html";
+            window.location.href = "${pageContext.request.contextPath}/login.html";
         }
     }
     </script>
