@@ -21,11 +21,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -88,6 +90,28 @@ public class ProcessDeploy {
             System.out.println(originalFilename.endsWith(".bpmn"));
             return ResultVO.error("文件格式不对",null,null);
         }
+    }
+
+
+    @ResponseBody
+    @RequestMapping("upload")
+    public String upload(@RequestParam(value = "file") CommonsMultipartFile file, String name, HttpServletRequest request){
+        System.out.println("getName===>>>"+file.getName());
+        System.out.println("name===>>>"+name);
+        String filePath="";
+        String originalFilename = file.getOriginalFilename();
+        System.out.println("getOriginalFilename========>>>"+originalFilename);
+        try{
+            // 文件保存路径
+             filePath = request.getSession().getServletContext().getRealPath("/") + "upload"
+                    + file.getOriginalFilename();
+            // 转存文件
+            file.transferTo(new File(filePath));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return filePath;
     }
 
     @ResponseBody

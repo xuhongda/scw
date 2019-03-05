@@ -5,6 +5,7 @@ import com.xu.scw.service.projectName.projectNameImpl.ProjectNameServiceImpl;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -56,6 +57,8 @@ public class MyAppListener implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-
+        System.out.println("亲，后会有期");
+        ServletContext servletContext = sce.getServletContext();
+        System.out.println(servletContext.getServletContextName());
     }
 }
