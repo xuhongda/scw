@@ -60,7 +60,7 @@
         <pagehelper.version>5.0.3</pagehelper.version>
         <!-- jackson：springmvc用的支持快速ajax。返回json数据 -->
         <!--<jackson.version>2.7.4</jackson.version>-->
-        <jackson.version>2.9.0</jackson.version>
+        <jackson.version>2.9.9</jackson.version>
         <!-- MBG：mybatis的逆向工程 ：
         使用MBG根据数据库的表生成javaBean、Mapper接口、Mapper文件；
         基本的CRUD
