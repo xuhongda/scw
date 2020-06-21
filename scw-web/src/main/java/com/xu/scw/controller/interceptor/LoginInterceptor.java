@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 import static com.xu.scw.pojo.Constants.USER_NAME;
 
 /**
- * @authorxuhongda on 2017/11/25
+ * @author xuhongda on 2017/11/25
  * com.xu.scw.controller.interceptor
  * scw-parent
  */
